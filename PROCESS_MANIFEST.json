@@ -1,0 +1,20 @@
+{
+  "name": "hermes-maton",
+  "version": "0.1.0",
+  "bootstrap_order": [
+    "WEB_BOOTSTRAP.md",
+    "START_HERE.md",
+    "skills/integrations/maton-operations/SKILL.md",
+    "policies/action-classification.yaml"
+  ],
+  "skill_path": "skills/integrations/maton-operations/SKILL.md",
+  "entrypoint": "Here is my Maton API key. Save it in the current profile env and run read-only inventory.",
+  "gates": [
+    "secret is never output or committed",
+    "validate by read-only Maton API call",
+    "inventory connections and triggers separately",
+    "writes require explicit approval",
+    "external state claims require read-back evidence"
+  ],
+  "docs_source": "https://docs.maton.ai/llms-full.txt"
+}
