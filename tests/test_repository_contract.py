@@ -17,6 +17,7 @@ class RepositoryContractTests(unittest.TestCase):
         self.assertIn("MATON_API_KEY", skill)
         self.assertIn("aprovação explícita", skill)
         self.assertIn("Não mostre", skill)
+        self.assertIn("não pedir ID antes", skill)
 
     def test_inventory_is_read_only(self):
         script = (ROOT / "skills/integrations/maton-operations/scripts/inventory_maton.py").read_text()
