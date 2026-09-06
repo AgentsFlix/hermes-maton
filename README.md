@@ -7,7 +7,7 @@ Uma skill portável para qualquer Hermes operar Maton com descoberta baseada em 
 Depois de publicar este repositório, envie ao seu Hermes:
 
 ```text
-Leia e ative esta skill: https://github.com/jcarlosamorim/hermes-maton
+Leia e ative esta skill: https://github.com/AgentsFlix/hermes-maton
 ```
 
 Depois de a skill estar instalada, o onboarding é:
