@@ -1,0 +1,18 @@
+version: 1
+classes:
+  read:
+    approval: request_is_sufficient
+    examples: [list_connections, list_triggers, list_events, get_message_metadata, list_calendar_events]
+  reversible_write:
+    approval: explicit_before_execution
+    examples: [create_draft, add_label, create_task]
+  external_write:
+    approval: explicit_before_execution_and_readback
+    examples: [send_email, publish_post, create_calendar_event, create_trigger, deploy_vercel]
+  destructive:
+    approval: specific_confirmation_before_execution_and_readback
+    examples: [delete_connection, delete_trigger, rotate_destination_secret, delete_event, payment]
+prohibitions:
+  - Never infer approval from an ACTIVE connection.
+  - Never expose MATON_API_KEY in output, source, logs, URLs or client-side code.
+  - Never use an unverified webhook endpoint as a trigger destination.
